@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ramadhan Kareem</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(180deg, #0b1d3a, #020817);
+    color: white;
+    text-align: center;
+}
+
+/* Judul */
+h1 {
+    margin-top: 60px;
+    font-size: 40px;
+    color: gold;
+}
+
+/* Tombol */
+button {
+    padding: 15px 25px;
+    font-size: 18px;
+    background: gold;
+    color: #0b1d3a;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ffd700;
+    transform: scale(1.05);
+}
+
+/* Box Syarat Puasa */
+#syaratBox {
+    width: 80%;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(255, 215, 0, 0.1);
+    border: 1px solid gold;
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+/* Animasi muncul */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(-10px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+</style>
+</head>
+
+<body>
+
+<h1>🌙 Ramadhan Kareem 🌙</h1>
+<p>Selamat Menjalankan Ibadah Puasa</p>
+
+<button onclick="toggleSyarat()">Lihat Syarat Puasa</button>
+
+<div id="syaratBox">
+    <h2>Syarat Wajib Puasa</h2>
+    <p>1. Beragama Islam</p>
+    <p>2. Sudah Baligh</p>
+    <p>3. Berakal Sehat</p>
+    <p>4. Mampu Berpuasa</p>
+    <p>5. Tidak sedang berhalangan (haid / sakit berat / musafir)</p>
+</div>
+
+<script>
+function toggleSyarat() {
+    var box = document.getElementById("syaratBox");
+
+    if (box.style.display === "none") {
+        box.style.display = "block";
+    } else {
+        box.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>
